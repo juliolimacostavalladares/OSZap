@@ -1,1 +1,24 @@
-<svg fill="none" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M14.5 13.5V5.41a1 1 0 0 0-.3-.7L9.8.29A1 1 0 0 0 9.08 0H1.5v13.5A2.5 2.5 0 0 0 4 16h8a2.5 2.5 0 0 0 2.5-2.5m-1.5 0v-7H8v-5H3v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1M9.5 5V2.12L12.38 5zM5.13 5h-.62v1.25h2.12V5zm-.62 3h7.12v1.25H4.5zm.62 3h-.62v1.25h7.12V11z" clip-rule="evenodd" fill="#666" fill-rule="evenodd"/></svg>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  {/* Fundo do Favicon */}
+  <rect width="512" height="512" fill="#20232B"/> {/* Cor de fundo escura */}
+
+  {/* Grupo para o logo: centralizado e escalado para 70% */}
+  {/* Vamos usar transform para escalar e centralizar o texto */}
+  {/* A largura do texto "OSZap!" com font-size 65 é aproximadamente 360px */}
+  {/* 70% de 512px é 358.4px. Vamos escalar para que a largura total seja ~358px. */}
+  {/* A escala será 358.4 / 400 (largura original aproximada do texto no svg acima) = ~0.896 */}
+  {/* Para centralizar um item de ~358.4px de largura em 512px: (512 - 358.4) / 2 = 76.8px */}
+  {/* Para centralizar um item de ~65px de altura (font-size) em 512px: (512 - 65) / 2 = 223.5px */}
+  
+  <g transform="translate(76.8, 223.5) scale(0.896)"> 
+    {/* Texto "OSZap" */}
+    <text x="50" y="95" font-family="'Montserrat', sans-serif" font-size="65" font-weight="bold" fill="white">
+      OSZap
+    </text>
+
+    {/* Ponto de exclamação laranja */}
+    <text x="400" y="95" font-family="'Montserrat', sans-serif" font-size="65" font-weight="bold" fill="#F97316">
+      !
+    </text>
+  </g>
+</svg>
