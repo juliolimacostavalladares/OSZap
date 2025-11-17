@@ -27,14 +27,14 @@ const FeatureCard: React.FC<FeatureProps> = ({
 }) => {
   return (
     <div
-      className={`flex flex-col md:flex-row items-center gap-8 md:gap-16 py-16 md:py-24 ${
+      className={`flex flex-col md:flex-row items-center gap-8 md:gap-12 py-16 md:py-24 w-full ${
         reverse ? "md:flex-row-reverse" : ""
       }`}
     >
       {/* Coluna 1: Ilustração/Mockup (Visual) */}
       <div
-        className={`w-full md:w-1/2 flex justify-center ${
-          reverse ? "md:justify-start" : "md:justify-end"
+        className={`w-full md:w-1/2 flex ${
+          reverse ? "md:justify-end" : "md:justify-start"
         }`}
       >
         <div className="group relative w-full max-w-lg aspect-square">
@@ -57,11 +57,7 @@ const FeatureCard: React.FC<FeatureProps> = ({
       </div>
 
       {/* Coluna 2: Texto (Descrição) */}
-      <div
-        className={`w-full md:w-1/2 text-left ${
-          reverse ? "md:text-right md:flex md:flex-col md:items-end" : ""
-        }`}
-      >
+      <div className="w-full md:w-1/2 text-left md:flex md:flex-col md:items-start">
         <div className="inline-flex items-center gap-2 text-orange-500 bg-gradient-to-r from-orange-500/10 via-orange-500/5 to-orange-500/10 backdrop-blur-sm border border-orange-500/30 px-5 py-2.5 rounded-full text-xs font-bold tracking-wide uppercase mb-8 shadow-lg shadow-orange-500/10 hover:shadow-orange-500/20 transition-all duration-300 hover:scale-105">
           {React.cloneElement(icon as React.ReactElement<any>, {
             className: "w-4 h-4",
@@ -100,17 +96,17 @@ export default function FeatureSection() {
           </div>
           <h2 className="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-6 text-white leading-tight tracking-tight">
             <span className="relative inline-block">
-              <span className="relative z-10">Simples.</span>
+              <span className="relative z-10">Simples,</span>
               <span className="absolute inset-0 bg-gradient-to-r from-orange-500/20 to-orange-400/20 blur-2xl"></span>
             </span>{" "}
             <span className="relative inline-block">
               <span className="relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-400">
-                Rápido.
+                Rápido,
               </span>
               <span className="absolute inset-0 bg-gradient-to-r from-orange-500/20 to-orange-400/20 blur-2xl"></span>
             </span>{" "}
             <span className="relative inline-block">
-              <span className="relative z-10">Prático.</span>
+              <span className="relative z-10">Prático,</span>
               <span className="absolute inset-0 bg-gradient-to-r from-orange-500/20 to-orange-400/20 blur-2xl"></span>
             </span>
           </h2>
