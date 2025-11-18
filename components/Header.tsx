@@ -11,17 +11,8 @@ export const Header: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <div className="flex items-center gap-2">
-            <img 
-              src="/logo.png" 
-              alt="OSZap" 
-              className="h-8 w-auto object-contain brightness-0 invert" 
-              onError={(e) => {
-                e.currentTarget.style.display = 'none';
-                e.currentTarget.nextElementSibling?.classList.remove('hidden');
-              }}
-            />
             {/* Fallback text styled like the logo in image */}
-            <span className="hidden font-extrabold text-2xl text-white tracking-tight">
+            <span className="font-extrabold text-2xl text-white tracking-tight">
               OSZap<span className="text-brand-500">!</span>
             </span>
           </div>

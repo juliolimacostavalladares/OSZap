@@ -115,14 +115,14 @@ export const SmartDemo: React.FC = () => {
                   className={`absolute bottom-4 right-4 p-3 rounded-full transition-all duration-300 shadow-lg flex items-center justify-center ${
                     isRecording 
                       ? 'bg-red-500 hover:bg-red-600 animate-pulse scale-110' 
-                      : 'bg-brand-600 hover:bg-brand-500'
+                      : 'bg-white hover:bg-gray-200'
                   }`}
                   title={isRecording ? "Parar gravação" : "Gravar áudio"}
                 >
                   {isRecording ? (
                     <Square className="w-5 h-5 text-white fill-white" />
                   ) : (
-                    <Mic className="w-5 h-5 text-white" />
+                    <Mic className="w-5 h-5 text-brand-600" />
                   )}
                 </button>
               </div>
@@ -145,9 +145,9 @@ export const SmartDemo: React.FC = () => {
                  <button
                   onClick={handleDemo}
                   disabled={loading || !input || isRecording || isTranscribing}
-                  className="w-full sm:w-auto flex items-center justify-center gap-2 bg-white hover:bg-gray-200 disabled:opacity-50 disabled:cursor-not-allowed text-black px-6 py-3 rounded-xl font-bold transition-all shadow-lg"
+                  className="w-full sm:w-auto flex items-center justify-center gap-2 bg-brand-600 hover:bg-brand-600/80 disabled:opacity-50 disabled:cursor-not-allowed text-white px-6 py-3 rounded-xl font-bold transition-all shadow-lg"
                  >
-                   {loading ? <Loader2 className="animate-spin w-5 h-5" /> : <Sparkles className="w-5 h-5 text-brand-600" />}
+                   {loading ? <Loader2 className="animate-spin w-5 h-5" /> : <Sparkles className="w-5 h-5 text-white" />}
                    {loading ? 'Criando OS...' : 'Gerar OS'}
                  </button>
               </div>

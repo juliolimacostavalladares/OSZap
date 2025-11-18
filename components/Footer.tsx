@@ -10,16 +10,9 @@ export const Footer: React.FC = () => {
         <div className="grid md:grid-cols-4 gap-8 mb-12">
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center gap-2 mb-4">
-              <img 
-                src="/logo.png" 
-                alt="OSZap" 
-                className="h-8 w-auto object-contain brightness-0 invert" 
-                onError={(e) => {
-                  e.currentTarget.style.display = 'none';
-                  e.currentTarget.nextElementSibling?.classList.remove('hidden');
-                }}
-              />
-              <span className="hidden font-bold text-xl text-white">OSZap</span>
+              <span className="font-extrabold text-2xl text-white tracking-tight">
+                OSZap<span className="text-brand-500">!</span>
+              </span>
             </div>
             <p className="text-gray-500 max-w-xs">
               A ferramenta definitiva para prestadores de serviço. Menos papel, mais lucro.
